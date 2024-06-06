@@ -8,8 +8,10 @@ abstract interface class AuthRemoteDataSource {
     required String password,
   });
 
-  Future<String> loginWithEmailPassword(
-      {required String email, required String password});
+  Future<String> loginWithEmailPassword({
+    required String email,
+    required String password,
+  });
 }
 
 class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
@@ -40,7 +42,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
           'name': name,
         },
       );
-      if(response.user == null) {
+      if (response.user == null) {
         throw ServerException('User is null');
       }
       return response.user!.id;

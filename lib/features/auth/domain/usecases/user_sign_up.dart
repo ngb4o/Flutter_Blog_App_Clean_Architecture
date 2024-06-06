@@ -1,7 +1,8 @@
 import 'package:flutter_blog_app_clean_architecture/core/error/failures.dart';
-import 'package:flutter_blog_app_clean_architecture/core/usercase/usecase.dart';
 import 'package:flutter_blog_app_clean_architecture/features/auth/domain/repository/auth_repository.dart';
 import 'package:fpdart/fpdart.dart';
+
+import '../../../../core/usecase/usecase.dart';
 
 class UserSignUp implements Usecase<String, UserSignUpParams> {
   final AuthRepository authRepository;
@@ -23,6 +24,9 @@ class UserSignUpParams {
   final String name;
   final String password;
 
-  UserSignUpParams(
-      {required this.email, required this.name, required this.password});
+  UserSignUpParams({
+    required this.email,
+    required this.name,
+    required this.password,
+  });
 }
