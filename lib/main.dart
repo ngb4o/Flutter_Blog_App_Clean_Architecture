@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_blog_app_clean_architecture/core/theme/theme.dart';
 import 'package:flutter_blog_app_clean_architecture/features/auth/presentation/pages/signup_page.dart';
 
 void main() {
@@ -13,10 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Debug App',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true
-      ),
+      theme: AppTheme.darkTheme,
       home: SignUpPage(),
     );
   }
