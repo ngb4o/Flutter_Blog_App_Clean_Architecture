@@ -30,3 +30,15 @@ class UserSignUpParams {
     required this.password,
   });
 }
+
+// class UserSignUpParams {
+//   final String email;
+//   final String name;
+//   final String password;
+//
+//   UserSignUpParams({
+//     required this.email,
+//     required this.name,
+//     required this.password,
+//   });
+// }
