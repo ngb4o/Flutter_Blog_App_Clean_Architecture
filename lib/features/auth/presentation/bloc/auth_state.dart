@@ -13,7 +13,6 @@ final class AuthSuccess extends AuthState {
   final String uid;
 
   const AuthSuccess(this.uid);
-
 }
 
 final class AuthFailure extends AuthState {
