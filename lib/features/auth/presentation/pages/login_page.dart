@@ -5,7 +5,10 @@ import 'package:flutter_blog_app_clean_architecture/features/auth/presentation/w
 import 'package:flutter_blog_app_clean_architecture/features/auth/presentation/widgets/auth_gradient_button.dart';
 
 class LoginPage extends StatefulWidget {
-  static route() => MaterialPageRoute(builder: (context) => LoginPage(),);
+  static route() => MaterialPageRoute(
+        builder: (context) => LoginPage(),
+      );
+
   const LoginPage({super.key});
 
   @override
@@ -65,8 +68,10 @@ class _LoginPageState extends State<LoginPage> {
                 ),
 
                 //Button Sign Up
-                const AuthGradientButton(
+                AuthGradientButton(
                   buttonText: 'Sign In',
+                  onPressed: () {
+                  },
                 ),
 
                 const SizedBox(
@@ -75,10 +80,7 @@ class _LoginPageState extends State<LoginPage> {
 
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                      SignUpPage.route()
-                    );
+                    Navigator.push(context, SignUpPage.route());
                   },
                   child: RichText(
                     text: TextSpan(
